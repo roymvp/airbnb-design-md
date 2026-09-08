@@ -1,7 +1,7 @@
 "use client";
 
 import { useId, useState } from "react";
-import { Search } from "lucide-react";
+import { ChevronDown, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 import {
@@ -39,7 +39,10 @@ export function SearchBar({
     const prefix = `${id}-${mobile ? "mobile" : "desktop"}`;
     const fieldClass = mobile
       ? "h-14 w-full min-w-0 rounded-sm border border-input bg-background px-3 text-base text-foreground outline-none placeholder:text-muted-foreground focus:border-foreground focus:shadow-[inset_0_0_0_1px_var(--foreground)]"
-      : "w-full min-w-0 rounded-xs bg-background py-1 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-2 focus-visible:outline-foreground";
+      : "search-control";
+    const groupClass = mobile
+      ? ""
+      : "search-field relative min-w-0 flex-1 gap-1 rounded-full px-5 py-2";
     return (
       <form
         onSubmit={submit}
@@ -53,11 +56,11 @@ export function SearchBar({
         className={
           mobile
             ? "flex flex-col gap-6"
-            : "flex h-16 items-center rounded-full border bg-background px-2 shadow-float"
+            : "flex h-20 items-center rounded-full border bg-background px-2 shadow-float"
         }
       >
         <FieldGroup className={mobile ? "" : "flex-row items-center gap-0"}>
-          <Field className={mobile ? "" : "min-w-0 flex-[1.4] gap-0 px-5"}>
+          <Field className={mobile ? "" : `${groupClass} flex-[1.4]`}>
             <FieldLabel htmlFor={`${prefix}-where`}>目的地</FieldLabel>
             <input
               id={`${prefix}-where`}
@@ -70,7 +73,7 @@ export function SearchBar({
               className={fieldClass}
             />
           </Field>
-          <Field className={mobile ? "" : "min-w-0 flex-1 gap-0 border-l px-5"}>
+          <Field className={groupClass}>
             <FieldLabel htmlFor={`${prefix}-date`}>入住日期</FieldLabel>
             <input
               id={`${prefix}-date`}
@@ -80,22 +83,29 @@ export function SearchBar({
               className={fieldClass}
             />
           </Field>
-          <Field className={mobile ? "" : "min-w-0 flex-1 gap-0 border-l px-5"}>
+          <Field className={groupClass}>
             <FieldLabel htmlFor={`${prefix}-guests`}>同行人数</FieldLabel>
-            <select
-              id={`${prefix}-guests`}
-              value={values.guests}
-              onChange={(e) =>
-                setValues({ ...values, guests: Number(e.target.value) })
-              }
-              className={fieldClass}
-            >
-              {[1, 2, 3, 4, 5, 6].map((n) => (
-                <option value={n} key={n}>
-                  {n} 位旅客
-                </option>
-              ))}
-            </select>
+            <div className="relative">
+              <select
+                id={`${prefix}-guests`}
+                value={values.guests}
+                onChange={(e) =>
+                  setValues({ ...values, guests: Number(e.target.value) })
+                }
+                className={`${fieldClass} appearance-none pr-6`}
+              >
+                {[1, 2, 3, 4, 5, 6].map((n) => (
+                  <option value={n} key={n}>
+                    {n} 位旅客
+                  </option>
+                ))}
+              </select>
+              <ChevronDown
+                aria-hidden="true"
+                className="pointer-events-none absolute top-1/2 size-4 -translate-y-1/2"
+                style={{ insetInlineEnd: mobile ? 12 : 0 }}
+              />
+            </div>
           </Field>
         </FieldGroup>
         <Button

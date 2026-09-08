@@ -1,6 +1,7 @@
 import { cva } from "class-variance-authority";
+import { cn } from "@/lib/utils";
 
-export const buttonVariants = cva(
+const buttonStyles = cva(
   "inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded-sm border border-transparent text-base font-medium transition-colors disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-50 [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
@@ -27,6 +28,13 @@ export const buttonVariants = cva(
       },
       shape: { default: "", pill: "rounded-full" },
     },
+    compoundVariants: [
+      { variant: "link", className: "min-h-11 border-0 px-0" },
+    ],
     defaultVariants: { variant: "default", size: "default", shape: "default" },
   },
 );
+
+export function buttonVariants(props?: Parameters<typeof buttonStyles>[0]) {
+  return cn(buttonStyles(props));
+}

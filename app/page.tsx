@@ -13,7 +13,7 @@ export default function Page() {
     <ShowcaseShell>
       <div className="flex flex-col gap-section">
         {/* v0 Design System Showcase Page */}
-        <section id="overview" className="flex flex-col gap-6">
+        <section id="overview" className="flex flex-col gap-8">
           <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
             <span>设计系统</span>
             <span>/</span>
@@ -32,12 +32,12 @@ export default function Page() {
                 从单一设计规范，到可以直接使用的组件与 starter。
               </p>
             </div>
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-wrap items-center gap-6">
               <a
                 href={sourceUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={buttonVariants({ variant: "outline", size: "sm" })}
+                className={buttonVariants({ variant: "link", size: "sm" })}
               >
                 原始规范
                 <ArrowUpRight data-icon="inline-end" />

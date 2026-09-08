@@ -88,10 +88,10 @@ export function MarketplacePreview() {
       </div>
       <Tabs
         defaultValue="preview"
-        className="overflow-hidden rounded-lg border"
+        className="gap-0 overflow-hidden rounded-lg border"
       >
-        <div className="flex items-center justify-between border-b bg-muted/60 px-5 py-2">
-          <TabsList variant="line">
+        <div className="flex items-center justify-between border-b bg-muted/60 px-6 md:px-8">
+          <TabsList variant="line" aria-label="场景展示方式">
             <TabsTrigger value="preview">
               <Eye data-icon="inline-start" />
               预览
@@ -106,8 +106,8 @@ export function MarketplacePreview() {
             响应式
           </span>
         </div>
-        <TabsContent value="preview">
-          <div className="p-5 md:p-8">
+        <TabsContent value="preview" keepMounted>
+          <div className="px-6 py-8 md:p-8">
             <div className="flex flex-col gap-8">
               <div className="mx-auto w-full max-w-3xl">
                 <SearchBar onSearch={setQuery} />
@@ -184,8 +184,8 @@ export function MarketplacePreview() {
           </div>
         </TabsContent>
         <TabsContent value="code">
-          <pre className="source-code m-5">{`import { SearchBar } from "@/components/design-system/search-bar"\nimport { StayCard } from "@/components/design-system/stay-card"\n\n<SearchBar onSearch={setQuery} />\n<StayCard\n  stay={stay}\n  saved={saved}\n  onSavedChange={setSaved}\n  onSelect={() => setSelected(stay)}\n/>`}</pre>
-          <p className="px-5 pb-5 text-sm text-muted-foreground">
+          <pre className="source-code m-6 md:m-8">{`import { SearchBar } from "@/components/design-system/search-bar"\nimport { StayCard } from "@/components/design-system/stay-card"\n\n<SearchBar onSearch={setQuery} />\n<StayCard\n  stay={stay}\n  saved={saved}\n  onSavedChange={setSaved}\n  onSelect={() => setSelected(stay)}\n/>`}</pre>
+          <p className="px-6 pb-8 text-sm text-muted-foreground md:px-8">
             搜索与收藏均为受控回调；接入业务时由调用方提供数据和持久化。
           </p>
         </TabsContent>

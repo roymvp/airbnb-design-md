@@ -126,12 +126,28 @@
   .source-code {
     @apply min-w-0 overflow-x-auto rounded-sm bg-muted p-4 font-mono text-sm leading-relaxed text-foreground;
   }
-  [data-slot="tabs-list"] {
-    min-height: 44px;
+  .search-field {
+    @apply transition-colors hover:bg-muted focus-within:bg-muted has-[:focus-visible]:outline-2 has-[:focus-visible]:-outline-offset-2 has-[:focus-visible]:outline-foreground;
   }
-  [data-slot="tabs-trigger"] {
-    min-height: 40px;
-    padding-inline: 16px;
+  .search-field + .search-field::before {
+    content: "";
+    position: absolute;
+    inset-block: 16px;
+    inset-inline-start: 0;
+    width: 1px;
+    background: var(--border);
+  }
+  .search-field:focus-within::before,
+  .search-field:focus-within + .search-field::before {
+    opacity: 0;
+  }
+  .search-control {
+    @apply h-6 w-full min-w-0 appearance-none border-0 bg-transparent p-0 text-sm leading-6 text-foreground outline-none placeholder:text-muted-foreground;
+  }
+  .search-control::-webkit-datetime-edit,
+  .search-control::-webkit-date-and-time-value {
+    padding: 0;
+    text-align: start;
   }
 }
 

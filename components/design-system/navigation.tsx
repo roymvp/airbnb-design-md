@@ -43,7 +43,8 @@ export function Navigation({
         className={cn(
           "flex min-h-12 items-center text-base font-medium text-muted-foreground hover:text-foreground",
           activeHref === item.href && "text-foreground",
-          !mobile && activeHref === item.href && "border-b-2 border-foreground",
+          !mobile && "h-full border-b-2 border-transparent",
+          !mobile && activeHref === item.href && "border-foreground",
           mobile && "px-3",
         )}
       >

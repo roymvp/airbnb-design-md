@@ -231,10 +231,18 @@ export function Foundations() {
                 ))}
               </div>
               <p className="section-copy">
-                微间距 2px · 卡片间距 16px · 区块间距 64px
+                标签与值 4px · 标题与说明 8px · 操作间距 24px · 内容组 32px · 区块 64px
               </p>
             </div>
           </div>
+        </div>
+        <div className="flex flex-col gap-4">
+          <h3 className="text-base font-semibold">对齐看内容，不看隐形盒子</h3>
+          <ul className="grid gap-4 text-sm leading-relaxed text-muted-foreground md:grid-cols-3">
+            <li>有底色、边框或阴影时，对齐容器外边缘；无容器的文字操作，对齐首字或前置图标的可见边缘，不保留多余横向内边距。</li>
+            <li>可见内容与点击区域分开考虑。文字操作保留至少 44px 高度；独立图标保留完整热区，贴边时由布局补偿留白，不缩小热区。</li>
+            <li>线形 Tab 的 2px 选中线落在底部分隔线上，宽度跟随图文内容。选中、悬停与键盘焦点各自表达，不互相替代。</li>
+          </ul>
         </div>
         <div className="spec-panel flex flex-wrap items-center justify-between gap-6 p-6">
           <div className="flex flex-col gap-2">
