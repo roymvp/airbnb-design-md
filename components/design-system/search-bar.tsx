@@ -42,7 +42,7 @@ export function SearchBar({
       : "search-control";
     const groupClass = mobile
       ? ""
-      : "search-field relative min-w-0 flex-1 gap-1 rounded-full px-5 py-2";
+      : "search-field relative h-16 min-w-0 flex-1 justify-center gap-1 rounded-full px-5";
     return (
       <form
         onSubmit={submit}
@@ -56,10 +56,10 @@ export function SearchBar({
         className={
           mobile
             ? "flex flex-col gap-6"
-            : "flex h-20 items-center rounded-full border bg-background px-2 shadow-float"
+            : "search-bar flex items-center gap-2 rounded-full border bg-background p-2 shadow-float"
         }
       >
-        <FieldGroup className={mobile ? "" : "flex-row items-center gap-0"}>
+        <FieldGroup className={mobile ? "" : "min-w-0 flex-1 flex-row items-center gap-0"}>
           <Field className={mobile ? "" : `${groupClass} flex-[1.4]`}>
             <FieldLabel htmlFor={`${prefix}-where`}>目的地</FieldLabel>
             <input
@@ -121,14 +121,14 @@ export function SearchBar({
     );
   }
   return (
-    <>
-      <div className="hidden md:block">{fields(false)}</div>
-      <div className="md:hidden">
+    <div className="@container/search w-full min-w-0">
+      <div className="hidden @min-[640px]/search:block">{fields(false)}</div>
+      <div className="@min-[640px]/search:hidden">
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger className="flex h-16 w-full items-center gap-4 rounded-full border bg-background px-6 text-left text-sm text-foreground shadow-float">
-            <Search className="size-5" />
-            <span className="flex flex-col">
-              <span className="font-semibold">
+            <Search className="size-5 shrink-0" />
+            <span className="flex min-w-0 flex-1 flex-col gap-1">
+              <span className="truncate font-semibold">
                 {values.destination || "寻找一处喜欢的小住"}
               </span>
               <span className="text-muted-foreground">
@@ -144,6 +144,6 @@ export function SearchBar({
           </DialogContent>
         </Dialog>
       </div>
-    </>
+    </div>
   );
 }

@@ -127,7 +127,19 @@
     @apply min-w-0 overflow-x-auto rounded-sm bg-muted p-4 font-mono text-sm leading-relaxed text-foreground;
   }
   .search-field {
-    @apply transition-colors hover:bg-muted focus-within:bg-muted has-[:focus-visible]:outline-2 has-[:focus-visible]:-outline-offset-2 has-[:focus-visible]:outline-foreground;
+    @apply transition-colors focus-within:bg-muted has-[:focus-visible]:outline-2 has-[:focus-visible]:-outline-offset-2 has-[:focus-visible]:outline-foreground;
+  }
+  .search-field > label {
+    line-height: 20px;
+  }
+  @media (hover: hover) {
+    .search-bar:not(:focus-within) .search-field:hover {
+      background: var(--muted);
+    }
+    .search-bar:not(:focus-within) .search-field:hover::before,
+    .search-bar:not(:focus-within) .search-field:hover + .search-field::before {
+      opacity: 0;
+    }
   }
   .search-field + .search-field::before {
     content: "";
@@ -145,9 +157,19 @@
     @apply h-6 w-full min-w-0 appearance-none border-0 bg-transparent p-0 text-sm leading-6 text-foreground outline-none placeholder:text-muted-foreground;
   }
   .search-control::-webkit-datetime-edit,
+  .search-control::-webkit-datetime-edit-fields-wrapper,
+  .search-control::-webkit-datetime-edit-year-field,
+  .search-control::-webkit-datetime-edit-month-field,
+  .search-control::-webkit-datetime-edit-day-field,
   .search-control::-webkit-date-and-time-value {
     padding: 0;
     text-align: start;
+  }
+  .search-control::-webkit-calendar-picker-indicator {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    padding: 0;
   }
 }
 
