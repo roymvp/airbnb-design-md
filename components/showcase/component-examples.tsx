@@ -230,12 +230,12 @@ export function ComponentExamples() {
               <CardTitle>收藏一个慢下来的周末</CardTitle>
               <CardDescription>基础信息卡 · 默认平面</CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent className="flex-1">
               <p className="text-base leading-relaxed">
                 标题、内容与操作各有自己的位置。边框保持轻量，正文回归自然的阅读节奏。
               </p>
             </CardContent>
-            <CardFooter>
+            <CardFooter className="min-h-26">
               <Button
                 variant="outline"
                 onClick={() => setCollected(!collected)}
@@ -251,7 +251,7 @@ export function ComponentExamples() {
               <CardTitle>把细节留给内容</CardTitle>
               <CardDescription>预订摘要 · 组合方式示例</CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent className="flex-1">
               <dl className="flex flex-col gap-4 text-base">
                 <div className="flex justify-between">
                   <dt className="text-muted-foreground">住宿费用</dt>
@@ -263,7 +263,7 @@ export function ComponentExamples() {
                 </div>
               </dl>
             </CardContent>
-            <CardFooter>
+            <CardFooter className="min-h-26">
               <p className="section-copy">演示金额，不提供真实预订或支付。</p>
             </CardFooter>
           </Card>
@@ -345,7 +345,7 @@ export function ComponentExamples() {
                   id={`navigation-${item.id}`}
                   href="#navigation"
                   onClick={() => setNav(`#navigation-${item.id}`)}
-                  className="flex min-h-11 items-center justify-between gap-3 rounded-sm px-3 text-sm hover:bg-muted"
+                  className="flex min-h-11 scroll-mt-28 items-center justify-between gap-3 rounded-sm px-3 text-sm hover:bg-muted"
                 >
                   <span>{item.label}</span>
                   <span className="text-muted-foreground">

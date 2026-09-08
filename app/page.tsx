@@ -49,7 +49,7 @@ export default function Page() {
               </a>
             </div>
           </div>
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-3 border-b pb-7 text-sm text-muted-foreground">
+          <div className="grid grid-cols-2 items-center gap-x-6 gap-y-3 border-b pb-7 text-sm text-muted-foreground md:flex md:flex-wrap">
             {["单一来源", "语义化 tokens", "可复用组件", "中文字体适配"].map(
               (item) => (
                 <span className="flex items-center gap-2" key={item}>

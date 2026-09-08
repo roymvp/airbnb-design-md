@@ -147,7 +147,7 @@ export function MarketplacePreview() {
                   </Button>
                 </div>
               )}
-              <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+              {shown.length > 0 && <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
                 {shown.map((stay, index) => (
                   <StayCard
                     key={stay.id}
@@ -167,7 +167,7 @@ export function MarketplacePreview() {
                     }}
                   />
                 ))}
-              </div>
+              </div>}
               {!shown.length && (
                 <div className="flex flex-col items-center gap-3 rounded-md bg-muted py-12 text-center text-foreground">
                   <Search className="size-6" />

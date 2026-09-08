@@ -37,6 +37,9 @@ export function SearchBar({
   }
   function fields(mobile: boolean) {
     const prefix = `${id}-${mobile ? "mobile" : "desktop"}`;
+    const fieldClass = mobile
+      ? "h-14 w-full min-w-0 rounded-sm border border-input bg-background px-3 text-base text-foreground outline-none placeholder:text-muted-foreground focus:border-foreground focus:shadow-[inset_0_0_0_1px_var(--foreground)]"
+      : "w-full min-w-0 rounded-xs bg-background py-1 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-2 focus-visible:outline-foreground";
     return (
       <form
         onSubmit={submit}
@@ -64,7 +67,7 @@ export function SearchBar({
                 setValues({ ...values, destination: e.target.value })
               }
               placeholder="想去哪里？"
-              className="w-full min-w-0 rounded-xs bg-background py-1 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-2 focus-visible:outline-foreground"
+              className={fieldClass}
             />
           </Field>
           <Field className={mobile ? "" : "min-w-0 flex-1 gap-0 border-l px-5"}>
@@ -74,7 +77,7 @@ export function SearchBar({
               type="date"
               value={values.date}
               onChange={(e) => setValues({ ...values, date: e.target.value })}
-              className="w-full min-w-0 rounded-xs bg-background py-1 text-sm text-muted-foreground focus-visible:outline-2 focus-visible:outline-foreground"
+              className={fieldClass}
             />
           </Field>
           <Field className={mobile ? "" : "min-w-0 flex-1 gap-0 border-l px-5"}>
@@ -85,7 +88,7 @@ export function SearchBar({
               onChange={(e) =>
                 setValues({ ...values, guests: Number(e.target.value) })
               }
-              className="w-full rounded-xs bg-background py-1 text-sm text-muted-foreground focus-visible:outline-2 focus-visible:outline-foreground"
+              className={fieldClass}
             >
               {[1, 2, 3, 4, 5, 6].map((n) => (
                 <option value={n} key={n}>

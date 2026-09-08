@@ -53,7 +53,7 @@ export function Navigation({
   return (
     <header
       className={cn(
-        "flex h-20 items-center justify-between border-b bg-background px-6 text-foreground",
+        "flex h-20 items-center justify-between border-b bg-background px-6 text-foreground md:grid md:grid-cols-[1fr_auto_1fr] md:gap-6",
         className,
       )}
     >
@@ -64,7 +64,7 @@ export function Navigation({
       >
         {links()}
       </nav>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center justify-self-end gap-2">
         {actions}
         <div className="md:hidden">
           <Dialog open={open} onOpenChange={setOpen}>

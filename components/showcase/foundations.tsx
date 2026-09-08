@@ -62,7 +62,7 @@ export function Foundations() {
           {colors.map((color) => (
             <div
               key={color.token}
-              className="overflow-hidden rounded-md border"
+              className="overflow-hidden rounded-md border last:col-span-2 md:last:col-span-1"
             >
               <div
                 className={`h-24 border-b ${color.color}`}
@@ -106,8 +106,8 @@ export function Foundations() {
             不过分放大的标题，自然、清晰的正文。一套无衬线贯穿始终。
           </p>
         </div>
-        <div className="spec-panel grid md:grid-cols-2">
-          <div className="border-b p-8 md:border-b-0 md:border-r">
+        <div className="spec-panel grid overflow-hidden md:grid-cols-2">
+          <div className="flex flex-col justify-center border-b bg-muted/50 p-6 text-foreground md:border-b-0 md:border-r md:p-8">
             <div className="flex flex-col gap-6">
               <span className="text-sm text-muted-foreground">
                 字体替代方案
@@ -124,11 +124,11 @@ export function Foundations() {
                 </p>
               </div>
               <p className="text-sm text-muted-foreground">
-                Regular 400 · Medium 500 · Semibold 600 · Bold 700
+                {"Regular\u00a0400 · Medium\u00a0500 · Semibold\u00a0600 · Bold\u00a0700"}
               </p>
             </div>
           </div>
-          <div className="flex flex-col divide-y px-6">
+          <div className="flex flex-col divide-y px-6 md:px-8">
             {[
               {
                 label: "Display",
@@ -167,7 +167,7 @@ export function Foundations() {
                     <span>{row.label}</span>
                     <span>{row.size}</span>
                   </div>
-                  <p className={row.className}>{row.text}</p>
+                  <p className={`${row.className} text-balance`}>{row.text}</p>
                 </div>
               </div>
             ))}
@@ -189,7 +189,7 @@ export function Foundations() {
           <div className="spec-panel p-6">
             <div className="flex flex-col gap-6">
               <h3 className="text-base font-semibold">圆角尺度</h3>
-              <div className="flex items-end justify-between gap-3">
+              <div className="flex h-24 items-end justify-between gap-2 md:gap-3">
                 {[
                   { label: "8", cls: "rounded-sm" },
                   { label: "14", cls: "rounded-md" },
@@ -201,7 +201,7 @@ export function Foundations() {
                     className="flex flex-col items-center gap-3"
                   >
                     <div
-                      className={`size-14 border-2 border-foreground/20 bg-muted ${item.cls}`}
+                      className={`size-12 border-2 border-foreground/20 bg-muted md:size-14 ${item.cls}`}
                     />
                     <span className="text-sm text-muted-foreground">
                       {item.label}px
@@ -217,7 +217,7 @@ export function Foundations() {
           <div className="spec-panel p-6">
             <div className="flex flex-col gap-6">
               <h3 className="text-base font-semibold">间距尺度</h3>
-              <div className="flex h-[82px] items-end justify-between gap-2">
+              <div className="flex h-24 items-end justify-between gap-2">
                 {[4, 8, 12, 16, 24, 32, 48, 64].map((space) => (
                   <div key={space} className="flex flex-col items-center gap-3">
                     <div

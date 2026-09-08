@@ -6,6 +6,9 @@
   --font-sans:
     var(--font-inter, Inter), "PingFang SC", "Microsoft YaHei",
     var(--font-cjk, "Noto Sans SC"), system-ui, sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Consolas, monospace, "PingFang SC",
+    "Microsoft YaHei", var(--font-cjk, "Noto Sans SC");
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -109,7 +112,7 @@
     @apply text-heading text-balance;
   }
   .section-copy {
-    @apply text-sm leading-relaxed text-muted-foreground;
+    @apply text-pretty text-sm leading-relaxed text-muted-foreground;
   }
   .spec-panel {
     @apply rounded-md border border-border bg-background text-foreground;
@@ -121,20 +124,7 @@
     @apply bg-primary/5 text-primary-active font-medium;
   }
   .source-code {
-    @apply overflow-x-auto rounded-sm bg-muted p-4 text-sm leading-relaxed text-foreground;
-    font-family: monospace;
-  }
-  [data-slot="switch"][data-size="default"] {
-    width: 44px;
-    height: 26px;
-  }
-  [data-slot="switch"][data-size="default"] [data-slot="switch-thumb"] {
-    width: 22px;
-    height: 22px;
-  }
-  [data-slot="switch"][data-size="default"]
-    [data-slot="switch-thumb"][data-checked] {
-    transform: translateX(18px);
+    @apply min-w-0 overflow-x-auto rounded-sm bg-muted p-4 font-mono text-sm leading-relaxed text-foreground;
   }
   [data-slot="tabs-list"] {
     min-height: 44px;

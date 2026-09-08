@@ -122,7 +122,7 @@ export function ShowcaseShell({ children }: { children: React.ReactNode }) {
       </a>
       <header className="sticky top-0 z-30 border-b bg-background text-foreground">
         <div className="mx-auto flex h-20 max-w-[1536px] items-center justify-between px-6 lg:px-8">
-          <div className="flex items-center gap-3">
+          <div className="flex shrink-0 items-center gap-3 whitespace-nowrap">
             <Blocks className="size-7 text-primary" strokeWidth={1.8} />
             <span className="text-base font-semibold">设计工作室</span>
             <span className="hidden text-border md:block">/</span>
@@ -132,7 +132,7 @@ export function ShowcaseShell({ children }: { children: React.ReactNode }) {
             <Badge variant="secondary">v0.1</Badge>
           </div>
           <div className="flex items-center gap-4">
-            <span className="hidden text-sm text-muted-foreground md:block">
+            <span className="hidden text-sm text-muted-foreground lg:block">
               Next.js · Tailwind CSS · shadcn/ui
             </span>
             <a
