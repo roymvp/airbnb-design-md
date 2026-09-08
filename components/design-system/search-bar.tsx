@@ -42,7 +42,7 @@ export function SearchBar({
       : "search-control";
     const groupClass = mobile
       ? ""
-      : "search-field relative h-16 min-w-0 flex-1 justify-center gap-1 rounded-full px-5";
+      : "search-field relative h-16 min-w-0 flex-1 justify-center gap-1 rounded-full px-6";
     return (
       <form
         onSubmit={submit}
@@ -85,7 +85,7 @@ export function SearchBar({
           </Field>
           <Field className={groupClass}>
             <FieldLabel htmlFor={`${prefix}-guests`}>同行人数</FieldLabel>
-            <div className="relative">
+            <div className={mobile ? "relative" : "contents"}>
               <select
                 id={`${prefix}-guests`}
                 value={values.guests}
@@ -103,7 +103,7 @@ export function SearchBar({
               <ChevronDown
                 aria-hidden="true"
                 className="pointer-events-none absolute top-1/2 size-4 -translate-y-1/2"
-                style={{ insetInlineEnd: mobile ? 12 : 0 }}
+                style={{ insetInlineEnd: mobile ? 12 : 24 }}
               />
             </div>
           </Field>
@@ -112,6 +112,7 @@ export function SearchBar({
           type="submit"
           variant={mobile ? "default" : "brand-icon"}
           size={mobile ? "default" : "icon"}
+          className={mobile ? undefined : "size-16"}
           aria-label="搜索示例住宿"
         >
           <Search />

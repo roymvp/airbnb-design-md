@@ -156,7 +156,12 @@
   .search-control {
     @apply h-6 w-full min-w-0 appearance-none border-0 bg-transparent p-0 text-sm leading-6 text-foreground outline-none placeholder:text-muted-foreground;
   }
+  .search-control[type="date"] {
+    position: static;
+    padding-inline-end: 24px;
+  }
   .search-control::-webkit-datetime-edit,
+  .search-control::-webkit-datetime-edit-text,
   .search-control::-webkit-datetime-edit-fields-wrapper,
   .search-control::-webkit-datetime-edit-year-field,
   .search-control::-webkit-datetime-edit-month-field,
@@ -166,6 +171,11 @@
     text-align: start;
   }
   .search-control::-webkit-calendar-picker-indicator {
+    position: absolute;
+    inset-inline-end: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
     width: 16px;
     height: 16px;
     margin: 0;
