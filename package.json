@@ -1,11 +1,16 @@
 {
-  "name": "my-project",
+  "name": "airbnb-style-starter",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "images:build": "node scripts/build-images.mjs",
+    "registry:build": "shadcn build",
+    "deliverables:build": "pnpm registry:build && node scripts/build-deliverables.mjs",
+    "check:system": "node scripts/check-system.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",
@@ -26,6 +31,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "postcss": "^8.5",
+    "sharp": "^0.35.4",
     "tailwindcss": "^4.3.3",
     "typescript": "5.7.3"
   }

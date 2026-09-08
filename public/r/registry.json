@@ -1,0 +1,120 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "airbnb-style",
+  "homepage": "https://github.com/VoltAgent/awesome-design-md/tree/main/design-md/airbnb",
+  "items": [
+    {
+      "name": "airbnb-style",
+      "type": "registry:block",
+      "title": "airbnb 风格",
+      "description": "独立、非官方的最小设计系统源码包。Next.js App Router、Tailwind v4、shadcn Base UI。",
+      "dependencies": [
+        "@base-ui/react@^1.5.0",
+        "class-variance-authority@^0.7.1",
+        "clsx@^2.1.1",
+        "tailwind-merge@^3.3.1",
+        "lucide-react@^1.16.0",
+        "tw-animate-css@^1.4.0",
+        "shadcn@^4.11.0"
+      ],
+      "files": [
+        {
+          "path": "components/ui/button.tsx",
+          "type": "registry:ui",
+          "target": "@ui/button.tsx"
+        },
+        {
+          "path": "components/ui/button-variants.ts",
+          "type": "registry:ui",
+          "target": "@ui/button-variants.ts"
+        },
+        {
+          "path": "components/ui/input.tsx",
+          "type": "registry:ui",
+          "target": "@ui/input.tsx"
+        },
+        {
+          "path": "components/ui/card.tsx",
+          "type": "registry:ui",
+          "target": "@ui/card.tsx"
+        },
+        {
+          "path": "components/ui/field.tsx",
+          "type": "registry:ui",
+          "target": "@ui/field.tsx"
+        },
+        {
+          "path": "components/ui/label.tsx",
+          "type": "registry:ui",
+          "target": "@ui/label.tsx"
+        },
+        {
+          "path": "components/ui/separator.tsx",
+          "type": "registry:ui",
+          "target": "@ui/separator.tsx"
+        },
+        {
+          "path": "components/ui/dialog.tsx",
+          "type": "registry:ui",
+          "target": "@ui/dialog.tsx"
+        },
+        {
+          "path": "components/ui/switch.tsx",
+          "type": "registry:ui",
+          "target": "@ui/switch.tsx"
+        },
+        {
+          "path": "components/ui/tabs.tsx",
+          "type": "registry:ui",
+          "target": "@ui/tabs.tsx"
+        },
+        {
+          "path": "components/ui/badge.tsx",
+          "type": "registry:ui",
+          "target": "@ui/badge.tsx"
+        },
+        {
+          "path": "components/design-system/navigation.tsx",
+          "type": "registry:component",
+          "target": "@components/design-system/navigation.tsx"
+        },
+        {
+          "path": "components/design-system/search-bar.tsx",
+          "type": "registry:component",
+          "target": "@components/design-system/search-bar.tsx"
+        },
+        {
+          "path": "components/design-system/stay-card.tsx",
+          "type": "registry:component",
+          "target": "@components/design-system/stay-card.tsx"
+        },
+        {
+          "path": "lib/utils.ts",
+          "type": "registry:lib",
+          "target": "@lib/utils.ts"
+        },
+        {
+          "path": "lib/design-fonts.ts",
+          "type": "registry:lib",
+          "target": "@lib/design-fonts.ts"
+        },
+        {
+          "path": "app/globals.css",
+          "type": "registry:file",
+          "target": "~/app/globals.css"
+        }
+      ],
+      "docs": "仅在干净的 Next.js App Router 根 app/ 项目或备份分支中安装；会替换全局样式及同名 UI 组件。在 app/layout.tsx 中导入 designFontVariables from '@/lib/design-fonts'，把变量加入 html 的 className，html 同时使用 bg-background，body 使用 font-sans，lang 设为 zh-CN。import './globals.css'。Server Components 的链接样式从 '@/components/ui/button-variants' 导入。图片与业务数据由调用方提供，StayCard 收藏及搜索为受控回调。安装包不附带页面示例；完整示例在 starter 内。",
+      "meta": {
+        "version": "0.1.0",
+        "status": "review",
+        "source": "https://github.com/VoltAgent/awesome-design-md/blob/main/design-md/airbnb/DESIGN.md",
+        "official": false,
+        "persistedAsSkill": false,
+        "supportedLayout": "root app/ (not src/app/)",
+        "fontAdaptation": "Inter + preferred CJK system fonts + segmented self-hosted Noto Sans SC",
+        "accessibilityAdaptation": "Source active color for text CTAs; 14px minimum copy; 44px favorite targets"
+      }
+    }
+  ]
+}
