@@ -19,7 +19,7 @@ await writeFile(
   JSON.stringify(
     {
       name: "airbnb 风格",
-      version: "0.1.0",
+      version: "0.2.0",
       source: manifest.items[0].meta.source,
       format: "css-custom-properties",
       values: variables(root),
