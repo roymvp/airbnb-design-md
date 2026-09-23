@@ -251,7 +251,7 @@ export type GalleryImage = { src: string; alt: string };
 export function ListingGallery({ images }: { images: GalleryImage[] }) {
   const shown = images.slice(0, 3);
   return (
-    <div className="grid aspect-4/3 grid-cols-1 gap-2 overflow-hidden rounded-md md:aspect-video md:grid-cols-[2fr_1fr] md:grid-rows-2">
+        <div className="grid aspect-4/3 grid-cols-1 gap-2 overflow-hidden rounded-lg md:aspect-video md:grid-cols-[2fr_1fr] md:grid-rows-2">
       {shown.map((image, index) => (
         <figure key={image.src} className={cn("min-h-0 overflow-hidden bg-muted", index === 0 ? "md:row-span-2" : "hidden md:block")}>
           <img src={image.src} alt={image.alt} width={index === 0 ? 960 : 480} height={index === 0 ? 720 : 360} loading={index === 0 ? "eager" : "lazy"} fetchPriority={index === 0 ? "high" : "auto"} className="size-full object-cover" />

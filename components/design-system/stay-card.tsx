@@ -35,7 +35,7 @@ export function StayCard({
 }) {
   return (
     <article className="group flex min-w-0 flex-col gap-3">
-      <div className="relative isolate aspect-square overflow-hidden rounded-md bg-muted">
+      <div className="relative isolate aspect-square overflow-hidden rounded-lg bg-muted">
         <button
           type="button"
           className="size-full text-left focus-visible:outline-offset-[-4px]"
@@ -69,10 +69,13 @@ export function StayCard({
           aria-label={`${saved ? "取消收藏" : "收藏"}${stay.title}`}
           aria-pressed={saved}
           onClick={() => onSavedChange(!saved)}
-          className="absolute right-2 top-2 flex size-11 items-center justify-center rounded-full bg-background/90 text-foreground transition-colors hover:bg-background"
+          className="absolute right-2 top-2 flex size-11 items-center justify-center rounded-full transition-transform motion-safe:hover:scale-110"
         >
           <Heart
-            className={cn("size-5", saved && "fill-primary text-primary")}
+            className={cn(
+              "size-6 [stroke-width:2] [filter:drop-shadow(0_1px_2px_rgb(0_0_0/45%))]",
+              saved ? "fill-primary text-white" : "fill-black/50 text-white",
+            )}
           />
         </button>
       </div>

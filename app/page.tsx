@@ -67,7 +67,7 @@ export default function Page() {
         <ExpandedPatterns />
         <Delivery />
         <footer className="flex flex-wrap items-center justify-between gap-3 border-t py-6 text-sm text-muted-foreground">
-          <span>airbnb 风格 · v0.2.0</span>
+          <span>airbnb 风格 · v0.2.1</span>
           <span>独立设计系统实验 · 非 Airbnb 官方产品</span>
           <a href="#overview" className="underline-offset-4 hover:underline">
             回到顶部 ↑

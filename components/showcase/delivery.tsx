@@ -36,7 +36,7 @@ export function Delivery() {
                 <div className="flex flex-col gap-1">
                   <h3 className="font-semibold">airbnb-style</h3>
                   <p className="text-sm text-muted-foreground">
-                    v0.2.0 · shadcn 源码安装包 · 非官方
+                    v0.2.1 · shadcn 源码安装包 · 非官方
                   </p>
                 </div>
               </div>
