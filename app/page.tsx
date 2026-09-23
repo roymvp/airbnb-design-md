@@ -5,6 +5,7 @@ import { MarketplacePreview } from "@/components/showcase/marketplace-preview";
 import { Foundations } from "@/components/showcase/foundations";
 import { ComponentExamples } from "@/components/showcase/component-examples";
 import { Delivery } from "@/components/showcase/delivery";
+import { ExpandedPatterns } from "@/components/showcase/expanded-patterns";
 import { buttonVariants } from "@/components/ui/button-variants";
 import { Badge } from "@/components/ui/badge";
 
@@ -23,7 +24,7 @@ export default function Page() {
             <div className="flex flex-col gap-3">
               <div className="flex flex-wrap items-center gap-3">
                 <h1 className="text-display text-balance">airbnb 风格</h1>
-                <Badge variant="outline">验收草稿</Badge>
+                <Badge variant="outline">可复用版本</Badge>
               </div>
               <p className="text-base leading-relaxed text-muted-foreground">
                 轻盈的白色界面，友好的圆角，以及恰到好处的玫红。
@@ -63,9 +64,10 @@ export default function Page() {
         <MarketplacePreview />
         <Foundations />
         <ComponentExamples />
+        <ExpandedPatterns />
         <Delivery />
         <footer className="flex flex-wrap items-center justify-between gap-3 border-t py-6 text-sm text-muted-foreground">
-          <span>airbnb 风格 · v0.1.0</span>
+          <span>airbnb 风格 · v0.2.1</span>
           <span>独立设计系统实验 · 非 Airbnb 官方产品</span>
           <a href="#overview" className="underline-offset-4 hover:underline">
             回到顶部 ↑

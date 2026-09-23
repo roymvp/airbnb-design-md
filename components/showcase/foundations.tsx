@@ -1,41 +1,16 @@
 import { ArrowDownToLine } from "lucide-react";
 
 const colors = [
-  {
-    name: "Rausch",
-    token: "--primary",
-    value: "#FF385C",
-    color: "bg-primary",
-    purpose: "品牌强调",
-  },
-  {
-    name: "Ink",
-    token: "--foreground",
-    value: "#222222",
-    color: "bg-foreground",
-    purpose: "主要文字",
-  },
-  {
-    name: "Muted",
-    token: "--muted-foreground",
-    value: "#6A6A6A",
-    color: "bg-muted-foreground",
-    purpose: "辅助文字",
-  },
-  {
-    name: "Soft",
-    token: "--muted",
-    value: "#F7F7F7",
-    color: "bg-muted",
-    purpose: "轻量背景",
-  },
-  {
-    name: "Canvas",
-    token: "--background",
-    value: "#FFFFFF",
-    color: "bg-background",
-    purpose: "页面底色",
-  },
+  { name: "Rausch", token: "--primary", value: "#FF385C", color: "bg-primary", purpose: "品牌强调" },
+  { name: "Ink", token: "--foreground", value: "#222222", color: "bg-foreground", purpose: "主要文字" },
+  { name: "Body", token: "--body", value: "#3F3F3F", color: "bg-body", purpose: "长正文" },
+  { name: "Muted", token: "--muted-foreground", value: "#6A6A6A", color: "bg-muted-foreground", purpose: "辅助文字" },
+  { name: "Muted Soft", token: "--muted-soft", value: "#929292", color: "bg-muted-soft", purpose: "禁用文字" },
+  { name: "Surface Soft", token: "--muted", value: "#F7F7F7", color: "bg-muted", purpose: "轻量背景" },
+  { name: "Surface Strong", token: "--surface-strong", value: "#F2F2F2", color: "bg-surface-strong", purpose: "图标底色" },
+  { name: "Hairline", token: "--border", value: "#DDDDDD", color: "bg-border", purpose: "默认边线" },
+  { name: "Border Strong", token: "--border-strong", value: "#C1C1C1", color: "bg-border-strong", purpose: "强调边线" },
+  { name: "Canvas", token: "--background", value: "#FFFFFF", color: "bg-background", purpose: "页面底色" },
 ];
 
 export function Foundations() {
@@ -58,11 +33,11 @@ export function Foundations() {
             下载 tokens
           </a>
         </div>
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-5">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
           {colors.map((color) => (
             <div
               key={color.token}
-              className="overflow-hidden rounded-md border last:col-span-2 md:last:col-span-1"
+              className="overflow-hidden rounded-md border"
             >
               <div
                 className={`h-24 border-b ${color.color}`}
@@ -130,36 +105,15 @@ export function Foundations() {
           </div>
           <div className="flex flex-col divide-y px-6 md:px-8">
             {[
-              {
-                label: "Display",
-                text: "每一次出发，都值得期待",
-                size: "28 / 700",
-                className: "text-display",
-              },
-              {
-                label: "Heading",
-                text: "寻找让你放松的小住",
-                size: "22 / 500",
-                className: "text-heading",
-              },
-              {
-                label: "Title",
-                text: "在山野之间，慢下来",
-                size: "16 / 600",
-                className: "text-base font-semibold",
-              },
-              {
-                label: "Body",
-                text: "让好的体验，从清晰的阅读开始。",
-                size: "16 / 400",
-                className: "text-base",
-              },
-              {
-                label: "Caption",
-                text: "辅助信息，也应该轻松可读。",
-                size: "14 / 400",
-                className: "text-sm text-muted-foreground",
-              },
+              { label: "Rating display", text: "4.98", size: "64 / 700", className: "text-rating" },
+              { label: "Display XL", text: "每一次出发，都值得期待", size: "28 / 700", className: "text-display-xl" },
+              { label: "Display LG", text: "竹影庭院里的安静小屋", size: "22 / 500", className: "text-display-lg" },
+              { label: "Display MD", text: "这个房源有什么", size: "21 / 700", className: "text-display-md" },
+              { label: "Display SM", text: "入住须知", size: "20 / 600", className: "text-display-sm" },
+              { label: "Title MD", text: "在山野之间，慢下来", size: "16 / 600", className: "text-title-md" },
+              { label: "Body MD", text: "让好的体验，从清晰的阅读开始。", size: "16 / 400", className: "text-body-md" },
+              { label: "Body SM", text: "辅助信息，也应该轻松可读。", size: "14 / 400", className: "text-body-sm text-muted-foreground" },
+              { label: "Badge", text: "房客推荐", size: "11 / 600", className: "text-badge" },
             ].map((row) => (
               <div key={row.label} className="py-4">
                 <div className="flex flex-col gap-2">

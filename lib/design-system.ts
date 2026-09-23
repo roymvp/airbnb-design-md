@@ -2,8 +2,8 @@ export const sourceUrl =
   "https://github.com/VoltAgent/awesome-design-md/blob/main/design-md/airbnb/DESIGN.md";
 export const designSystem = {
   name: "airbnb 风格",
-  version: "0.1.0",
-  status: "review",
+  version: "0.2.0",
+  status: "active",
   source: sourceUrl,
-  persistedAsSkill: false,
+  persistedAsSkill: true,
 } as const;

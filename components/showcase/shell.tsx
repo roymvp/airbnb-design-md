@@ -52,6 +52,9 @@ const groups = [
       { id: "inputs", label: "表单输入", icon: TextCursorInput },
       { id: "cards", label: "卡片", icon: Component },
       { id: "navigation", label: "导航", icon: PanelTop },
+      { id: "discovery", label: "发现与体验", icon: Component },
+      { id: "detail", label: "住宿详情", icon: LayoutTemplate },
+      { id: "footer-pattern", label: "目的地与页脚", icon: PanelTop },
     ],
   },
   {
@@ -129,7 +132,7 @@ export function ShowcaseShell({ children }: { children: React.ReactNode }) {
             <span className="hidden text-sm text-muted-foreground md:block">
               airbnb 风格
             </span>
-            <Badge variant="secondary">v0.1</Badge>
+            <Badge variant="secondary">v0.2</Badge>
           </div>
           <div className="flex items-center gap-4">
             <span className="hidden text-sm text-muted-foreground lg:block">
@@ -175,10 +178,10 @@ export function ShowcaseShell({ children }: { children: React.ReactNode }) {
           <div className="flex flex-col gap-2 px-3 pt-8">
             <p className="flex items-center gap-2 text-sm font-medium">
               <span className="size-2 rounded-full bg-primary" />
-              验收草稿
+              可复用版本
             </p>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              确认后保存为可复用 skill。
+              已补齐市场页与住宿详情模式。
             </p>
             <a
               href={sourceUrl}

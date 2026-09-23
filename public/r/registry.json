@@ -89,6 +89,26 @@
           "target": "@components/design-system/stay-card.tsx"
         },
         {
+          "path": "components/design-system/category-strip.tsx",
+          "type": "registry:component",
+          "target": "@components/design-system/category-strip.tsx"
+        },
+        {
+          "path": "components/design-system/experience-card.tsx",
+          "type": "registry:component",
+          "target": "@components/design-system/experience-card.tsx"
+        },
+        {
+          "path": "components/design-system/listing-detail.tsx",
+          "type": "registry:component",
+          "target": "@components/design-system/listing-detail.tsx"
+        },
+        {
+          "path": "components/design-system/site-footer.tsx",
+          "type": "registry:component",
+          "target": "@components/design-system/site-footer.tsx"
+        },
+        {
           "path": "lib/utils.ts",
           "type": "registry:lib",
           "target": "@lib/utils.ts"
@@ -104,13 +124,13 @@
           "target": "~/app/globals.css"
         }
       ],
-      "docs": "仅在干净的 Next.js App Router 根 app/ 项目或备份分支中安装；会替换全局样式及同名 UI 组件。在 app/layout.tsx 中导入 designFontVariables from '@/lib/design-fonts'，把变量加入 html 的 className，html 同时使用 bg-background，body 使用 font-sans，lang 设为 zh-CN。import './globals.css'。Server Components 的链接样式从 '@/components/ui/button-variants' 导入。图片与业务数据由调用方提供，StayCard 收藏及搜索为受控回调。安装包不附带页面示例；完整示例在 starter 内。",
+      "docs": "仅在干净的 Next.js App Router 根 app/ 项目或备份分支中安装；会替换全局样式及同名 UI 组件。在 app/layout.tsx 中导入 designFontVariables from '@/lib/design-fonts'，把变量加入 html 的 className，html 同时使用 bg-background，body 使用 font-sans，lang 设为 zh-CN。import './globals.css'。Server Components 的链接样式从 '@/components/ui/button-variants' 导入。图片与业务数据由调用方提供；搜索、收藏、分类、日期、人数与预订动作均通过受控值或回调接入。安装包不附带页面示例；完整市场页与住宿详情示例在 starter 内。",
       "meta": {
-        "version": "0.1.0",
-        "status": "review",
+        "version": "0.2.1",
+        "status": "active",
         "source": "https://github.com/VoltAgent/awesome-design-md/blob/main/design-md/airbnb/DESIGN.md",
         "official": false,
-        "persistedAsSkill": false,
+        "persistedAsSkill": true,
         "supportedLayout": "root app/ (not src/app/)",
         "fontAdaptation": "Inter + preferred CJK system fonts + segmented self-hosted Noto Sans SC",
         "accessibilityAdaptation": "Source active color for text CTAs; 14px minimum copy; 44px favorite targets"

@@ -36,7 +36,7 @@ export function Delivery() {
                 <div className="flex flex-col gap-1">
                   <h3 className="font-semibold">airbnb-style</h3>
                   <p className="text-sm text-muted-foreground">
-                    v0.1.0 · shadcn 源码安装包 · 非官方
+                    v0.2.1 · shadcn 源码安装包 · 非官方
                   </p>
                 </div>
               </div>
@@ -108,7 +108,7 @@ export function Delivery() {
             </pre>
             <pre className="source-code">
               {
-                'import { Button } from "@/components/ui/button"\nimport { Input } from "@/components/ui/input"\nimport { Card } from "@/components/ui/card"\nimport { Navigation } from "@/components/design-system/navigation"\nimport { SearchBar } from "@/components/design-system/search-bar"\nimport { StayCard } from "@/components/design-system/stay-card"'
+                'import { Button } from "@/components/ui/button"\nimport { Navigation } from "@/components/design-system/navigation"\nimport { SearchBar } from "@/components/design-system/search-bar"\nimport { StayCard } from "@/components/design-system/stay-card"\nimport { CategoryStrip } from "@/components/design-system/category-strip"\nimport { ReservationCard } from "@/components/design-system/listing-detail"\nimport { SiteFooter } from "@/components/design-system/site-footer"'
               }
             </pre>
           </div>
@@ -145,7 +145,7 @@ export function Delivery() {
             ],
             [
               "暂未覆盖",
-              "地图、复杂日期范围选择、骨架屏、Luxe / Plus 子品牌及暗色模式不在本次最小系统范围内。演示没有真实房源、账号、支付或数据持久化。",
+              "地图、骨架屏、Luxe / Plus 子品牌及暗色模式不在本系统范围内。日期范围与预订摘要只管理界面状态；演示没有真实房源、账号、支付或数据持久化。",
             ],
           ].map(([title, text]) => (
             <div
@@ -169,10 +169,9 @@ export function Delivery() {
         </a>
         <div className="rounded-md bg-muted p-6">
           <div className="flex flex-col gap-2">
-            <h3 className="text-base font-semibold">下一步，由你验收</h3>
+            <h3 className="text-base font-semibold">已经可以继承使用</h3>
             <p className="section-copy">
-              检查整体观感、按钮与输入状态、手机端布局。如果满意，请在聊天里确认；当前尚未注册或保存为可复用
-              skill。
+              当前版本已保存为团队设计系统 skill，并包含市场页、住宿详情、目的地链接与页脚模式。业务应用仍需接入自己的房源、账号、库存和支付数据。
             </p>
           </div>
         </div>

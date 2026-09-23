@@ -36,6 +36,10 @@ const stays: Stay[] = [
     image: "/images/courtyard.webp",
     imageAlt: "木质茶室朝向绿意盎然的庭院，日光洒在地板上",
     capacity: 2,
+    distance: "距西湖 1.8 公里",
+    dates: "10 月 12 日至 15 日",
+    guestFavorite: true,
+    photoCount: 4,
   },
   {
     id: "coast",
@@ -47,6 +51,10 @@ const stays: Stay[] = [
     image: "/images/coast.webp",
     imageAlt: "白色卧室的拱形窗外是一片蓝色水面",
     capacity: 4,
+    distance: "步行到洱海",
+    dates: "10 月 18 日至 21 日",
+    photoCount: 3,
+    photoIndex: 1,
   },
   {
     id: "cabin",
@@ -58,6 +66,11 @@ const stays: Stay[] = [
     image: "/images/cabin.webp",
     imageAlt: "松林和蕨类植物环绕着带玻璃窗的木屋",
     capacity: 6,
+    distance: "隐于竹林",
+    dates: "11 月 2 日至 5 日",
+    guestFavorite: true,
+    photoCount: 5,
+    photoIndex: 2,
   },
 ];
 
